@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro de Recursos para Asesores NaranjaX</title>
+  <!-- Incluye Tailwind CSS para estilos modernos y responsivos -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0f2f5;
+      /* Un gris claro para el fondo */
+    }
+
+    .naranja-x-orange {
+      background-color: #AD2BFC;
+      /* Color púrpura distintivo de Naranja X */
+    }
+
+    .naranja-x-text-orange {
+      color: #FF6600;
+    }
+
+    .link-card {
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    .link-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilos para el efecto de carga */
+    .dot-pulse {
+      position: relative;
+      left: -9999px;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #FF6600;
+      color: #FF6600;
+      box-shadow: 9999px 0 0 -5px #FF6600;
+      animation: dot-pulse 1.5s infinite linear;
+      animation-delay: 0.25s;
+    }
+
+    .dot-pulse::before,
+    .dot-pulse::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: #FF6600;
+      color: #FF6600;
+    }
+
+    .dot-pulse::before {
+      box-shadow: 9984px 0 0 -5px #FF6600;
+      animation: dot-pulse-before 1.5s infinite linear;
+      animation-delay: 0s;
+    }
+
+    @keyframes dot-pulse-before {
+      0% {
+        box-shadow: 9984px 0 0 -5px #FF6600;
+      }
+
+      30% {
+        box-shadow: 9984px 0 0 2px #FF6600;
+      }
+
+      60%,
+      100% {
+        box-shadow: 9984px 0 0 -5px #FF6600;
+      }
+    }
+
+    .dot-pulse::after {
+      box-shadow: 10014px 0 0 -5px #FF6600;
+      animation: dot-pulse-after 1.5s infinite linear;
+      animation-delay: 0.5s;
+    }
+
+    @keyframes dot-pulse {
+      0% {
+        box-shadow: 9999px 0 0 -5px #FF6600;
+      }
+
+      30% {
+        box-shadow: 9999px 0 0 2px #FF6600;
+      }
+
+      60%,
+      100% {
+        box-shadow: 9999px 0 0 -5px #FF6600;
+      }
+    }
+
+    @keyframes dot-pulse-after {
+      0% {
+        box-shadow: 10014px 0 0 -5px #FF6600;
+      }
+
+      30% {
+        box-shadow: 10014px 0 0 2px #FF6600;
+      }
+
+      60%,
+      100% {
+        box-shadow: 10014px 0 0 -5px #FF6600;
+      }
+    }
+  </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+  <!-- Encabezado de la página -->
+  <header class="naranja-x-orange text-white p-6 shadow-lg rounded-b-lg">
+    <div class="container mx-auto flex flex-col items-center justify-center">
+      <!-- Logo de Naranja X (placeholder) -->
+      <div class="flex items-center mb-2">
+        <img src="https://placehold.co/60x60/FF6600/FFFFFF?text=NX" alt="Logo Naranja X" class="rounded-full mr-3 border-2 border-white">
+        <h1 class="text-3xl font-bold">Centro de Recursos para Asesores Red Flores</h1>
+      </div>
+      <p class="text-lg text-center mt-2">Todo lo que necesitás para potenciar tu gestión, en un solo lugar.</p>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="flex-grow container mx-auto p-4 md:p-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Sección: Enlaces Esenciales -->
+      <section class="bg-white p-6 rounded-xl shadow-md link-card">
+        <h2 class="text-2xl font-semibold mb-4 naranja-x-text-orange border-b-2 border-orange-200 pb-2">Enlaces Esenciales</h2>
+        <ul class="space-y-3">
+          <li>
+            <a href="https://tuxpa.crm.dynamics.com/main.aspx?appid=9fe336f2-7833-ef11-8409-000d3a5831fa&pagetype=dashboard&id=91b757b5-8b39-4cb1-b174-1e59ac05f507&type=system&_canOverride=true" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Vista 360
+            </a>
+          </li>
+          <li>
+            <a href="https://tuxpa.crm.dynamics.com/main.aspx?appid=9fe336f2-7833-ef11-8409-000d3a5831fa&pagetype=entityrecord&etn=contact&id=" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Sistema de Gestión de Clientes TC (CRM)
+            </a>
+          </li>
+
+          <li>
+            <a href="https://bonx.naranjax.com/home" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Bonx
+            </a>
+          </li>
+          <li>
+            <a href="https://gemini.google.com/gem/54806ce5b56a" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              AMBI
+            </a>
+
+          <li>
+            <a href="https://logistica.awsnaranja.com/logistica/faces/login/login.xhtml" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Logística
+            </a>
+          </li>
+
+          <li>
+            <a href="https://app.slack.com/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Slack
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Sección: Herramientas de Venta y Gestión -->
+      <section class="bg-white p-6 rounded-xl shadow-md link-card">
+        <h2 class="text-2xl font-semibold mb-4 naranja-x-text-orange border-b-2 border-orange-200 pb-2">Herramientas de Venta y Gestión</h2>
+        <ul class="space-y-3">
+          <li>
+            <a href="https://app.powerbi.com/groups/me/apps/041c8a8a-bf63-485b-91a9-92084aeab154/reports/c3da48c8-012b-4445-b7d5-5b20f6d67138/ReportSection91b50fe9c1655a5b3c5c?ctid=1012c700-e42c-4aa6-9f4d-3dac6033b0f4&experience=power-bi" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Tablero Red Comercial
+            </a>
+          </li>
+
+          <li>
+            <a href="https://docs.google.com/spreadsheets/d/1hHIGiSM2zYVxw5fLuaYi1CIkFLtKYfD-mvGfW-Oi9kI/edit?gid=864593757#gid=864593757" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Dashboard Capacitaciones y ventas
+            </a>
+          </li>
+          <li>
+            <a href="https://naranjacx.yul1.qualtrics.com/homepage/ui" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Dashboard Qualtrics CSAT
+            </a>
+          </li>
+
+          <li>
+            <a href="https://app.powerbi.com/groups/me/reports/fbd9f6d0-2971-4fbc-8bf5-0fc6a21778c4/f0dbccbbeb472b49c5aa?ctid=1012c700-e42c-4aa6-9f4d-3dac6033b0f4&experience=power-bi" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Tablero de usabilidad de herramienta: Vista 360
+            </a>
+          </li>
+
+        </ul>
+      </section>
+
+      <!-- Sección: Capacitaciones y recursos de aprendizaje-->
+      <section class="bg-white p-6 rounded-xl shadow-md link-card">
+        <h2 class="text-2xl font-semibold mb-4 naranja-x-text-orange border-b-2 border-orange-200 pb-2">Capacitaciones y recursos de aprendizaje</h2>
+        <ul class="space-y-3">
+          <li>
+            <a href="https://autoservicioempprod.powerappsportals.com/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Base de Conocimientos
+            </a>
+          </li>
+
+          <li>
+            <a href="https://espacionx.naranjax.com/web/login/index.php" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Espacion N
+            </a>
+          </li>
+          <li>
+            <a href="https://naranjax.udemy.com/home/my-courses/learning-tools/" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Udemy para Nxers
+            </a>
+          </li>
+
+        </ul>
+      </section>
+      <!-- Sección: Cajas, Reca y manejo de dinero-->
+      <section class="bg-white p-6 rounded-xl shadow-md link-card">
+        <h2 class="text-2xl font-semibold mb-4 naranja-x-text-orange border-b-2 border-orange-200 pb-2">Cajas, Reca y manejo de dinero</h2>
+        <ul class="space-y-3">
+          <li>
+            <a href="https://app.powerbi.com/groups/me/reports/f1f0d2ee-eac1-49df-a171-d9a8645d59a9/ReportSectiona6f49d20500d316d9551?experience=power-bi" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Tablero Autogestión - Sector 24 hrs
+            </a>
+          </li>
+          <li>
+            <a href="https://app.powerbi.com/groups/me/reports/a0fd11bb-0bdd-4870-8a16-bc87bfcb445e/ReportSection9f8c65136f384cae8843?experience=power-bi&clientSideAuth=0" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Tablero de flujo de dinero en sucursales
+            </a>
+          </li>
+
+        </ul>
+      </section>
+
+      <!-- Sección: People y RRHH -->
+      <section class="bg-white p-6 rounded-xl shadow-md link-card">
+        <h2 class="text-2xl font-semibold mb-4 naranja-x-text-orange border-b-2 border-orange-200 pb-2">People y RRHH</h2>
+        <ul class="space-y-3">
+          <li>
+            <a href="https://tuexperiencia.naranjax.com/home" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Tu Experiencia NX
+            </a>
+          </li>
+
+          <li>
+            <a href="https://app.hibob.com/login/home" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Hi BOB
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.turecibo.com/e/login" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Tu Recibo
+            </a>
+          </li>
+
+        </ul>
+      </section>
+      <!-- Sección: Piloto Belgrano -->
+      <section class="bg-white p-6 rounded-xl shadow-md link-card">
+        <h2 class="text-2xl font-semibold mb-4 naranja-x-text-orange border-b-2 border-orange-200 pb-2">Links de prueba Piloto (Belgrano)</h2>
+        <ul class="space-y-3">
+          <li>
+            <a href="https://app.powerbi.com/groups/me/reports/b35bd5dc-6a87-45ad-b0fe-448319318b0a/eb439d259dd49241e0fd?ctid=1012c700-e42c-4aa6-9f4d-3dac6033b0f4&experience=power-bi" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Recomendador
+            </a>
+          </li>
+          <li>
+            <a href="" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Tablero
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Sección: Soporte al Cliente y Recursos -->
+      <section class="bg-white p-6 rounded-xl shadow-md link-card">
+        <h2 class="text-2xl font-semibold mb-4 naranja-x-text-orange border-b-2 border-orange-200 pb-2">Soporte al Cliente y Recursos</h2>
+        <ul class="space-y-3">
+
+          <li>
+            <a href="https://www.naranjax.com/contacto" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Canales de Contacto Naranja X (para clientes)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.naranjax.com/centro-de-seguridad" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Guías de Ciberseguridad para Clientes
+            </a>
+          </li>
+          <li>
+            <!-- -->
+            <a href="https://www.bcra.gob.ar/BCRAyVos/Situacion_Crediticia.asp" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Central de deudores BCRA
+            </a>
+          </li>
+
+        </ul>
+      </section>
+
+      <!-- Sección: Información de Productos -->
+      <section class="bg-white p-6 rounded-xl shadow-md link-card">
+        <h2 class="text-2xl font-semibold mb-4 naranja-x-text-orange border-b-2 border-orange-200 pb-2">Información de Productos</h2>
+        <ul class="space-y-3">
+          <li>
+            <a href="https://www.naranjax.com/ayuda/questionInfo/cuales-son-los-costos-de-las-tarjetas/Requisitos%20y%20costos" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Información de costos, comisiones y límites TC
+            </a>
+          </li>
+          <li>
+            <a href="https://www.naranjax.com/ayuda/cuales-son-los-costos-de-mantenimiento-de-la-cuenta-naranja-x2" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Información y costos de mantenimiento de cuenta NX
+            </a>
+          </li>
+          <li>
+            <a href="https://www.naranjax.com/comercios" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Soluciones de Cobro para Comercios (Toque, QR, Tap)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.naranjax.com/promociones" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Beneficios y Promociones Activas
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Sección: Legal y Cumplimiento -->
+      <section class="bg-white p-6 rounded-xl shadow-md link-card">
+        <h2 class="text-2xl font-semibold mb-4 naranja-x-text-orange border-b-2 border-orange-200 pb-2">Legal y Cumplimiento</h2>
+        <ul class="space-y-3">
+          <li>
+            <a href="https://www.argentina.gob.ar/produccion/defensadelconsumidor" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Portal Defensa del Consumidor
+            </a>
+          </li>
+          <li>
+            <a href="https://www.naranjax.com/atencion-usuarios-financieros" target="_blank" class="text-blue-600 hover:text-blue-800 hover:underline text-lg block p-2 bg-blue-50 rounded-lg">
+              Contacto Atención al Usuario de Servicios Financieros (BCRA)
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Nueva Sección: Consulta de Referentes de Áreas -->
+      <section class="bg-white p-6 rounded-xl shadow-md link-card col-span-1 md:col-span-2 lg:col-span-3">
+        <h2 class="text-2xl font-semibold mb-4 naranja-x-text-orange border-b-2 border-orange-200 pb-2">Consulta de Referentes de Áreas 🔍</h2>
+        <p class="text-gray-600 mb-4">Usa este desplegable para seleccionar un área y encontrar los referentes clave.</p>
+
+        <div class="flex flex-col space-y-4">
+          <select id="area-select" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500">
+            <option value="">Selecciona un área...</option>
+          </select>
+
+          <div id="referentes-results" class="space-y-4">
+            <!-- Los resultados de la búsqueda se mostrarán aquí -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: Asistente de Respuesta Gemini -->
+      <section class="bg-white p-6 rounded-xl shadow-md link-card col-span-1 md:col-span-2 lg:col-span-3">
+        <h2 class="text-2xl font-semibold mb-4 naranja-x-text-orange border-b-2 border-orange-200 pb-2">Asistente de Respuesta ✨</h2>
+        <p class="text-gray-600 mb-4">Usa este asistente para generar borradores de respuestas a consultas de clientes. Pega la información relevante de tu base de conocimientos y describe el problema para una respuesta precisa y profesional.</p>
+
+        <div class="flex flex-col space-y-4">
+          <label for="knowledge-base-input" class="font-semibold text-gray-700">Pega aquí la información de la Base de Conocimientos:</label>
+          <textarea id="knowledge-base-input" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" rows="6" placeholder="Ejemplo: 'Si un cliente perdió su tarjeta, el procedimiento a seguir es...'"></textarea>
+
+          <label for="prompt-input" class="font-semibold text-gray-700">Describe la consulta del cliente:</label>
+          <textarea id="prompt-input" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500" rows="4" placeholder="Ejemplo: 'Un cliente se queja de que el débito de su tarjeta Naranja X no se procesó a tiempo. Explicar el motivo y ofrecer una solución.'"></textarea>
+
+          <div class="flex items-center space-x-4">
+            <button id="generate-response-btn" class="bg-orange-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-orange-600 transition-colors duration-200">
+              Generar Respuesta ✨
+            </button>
+          </div>
+
+          <!-- Contenedor para la respuesta generada -->
+          <div id="response-container" class="mt-4 hidden">
+            <h3 class="text-xl font-semibold mb-2 naranja-x-text-orange">Borrador de Respuesta</h3>
+            <div id="loading-indicator" class="flex justify-center items-center p-4 hidden">
+              <div class="dot-pulse"></div>
+            </div>
+            <div id="generated-response" class="bg-gray-100 p-4 rounded-lg border border-gray-300 text-gray-800 whitespace-pre-wrap"></div>
+            <button id="copy-response-btn" class="mt-2 bg-gray-200 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-300 transition-colors duration-200">
+              Copiar al Portapapeles
+            </button>
+            <span id="copy-message" class="ml-2 text-sm text-green-600 hidden">¡Copiado!</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="naranja-x-orange text-white p-4 text-center mt-8 rounded-t-lg">
+    <p>&copy; Red Flores 2025.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const knowledgeBaseInput = document.getElementById('knowledge-base-input');
+      const promptInput = document.getElementById('prompt-input');
+      const generateBtn = document.getElementById('generate-response-btn');
+      const responseContainer = document.getElementById('response-container');
+      const generatedResponse = document.getElementById('generated-response');
+      const loadingIndicator = document.getElementById('loading-indicator');
+      const copyBtn = document.getElementById('copy-response-btn');
+      const copyMessage = document.getElementById('copy-message');
+      const areaSelect = document.getElementById('area-select');
+      const resultsContainer = document.getElementById('referentes-results');
+      // Datos de Referentes
+      const referentesData = [
+        // Senior de Sucursal
+        {
+          area: 'Senior de Sucursal Balvanera - AMBA I',
+          nombre: 'Emiliano Ferro',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal Moron- AMBA I',
+          nombre: 'Daniela Medina',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal San Isidro- AMBA I',
+          nombre: 'Juan Vitelli (Turco)',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal - AMBA I',
+          nombre: 'Maria Florencia Guerra',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal - AMBA I',
+          nombre: 'Emmanuel Bonnin',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal - AMBA I',
+          nombre: 'Andrea Martinez',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal - AMBA I',
+          nombre: 'Damian Diaz',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal Caballito - AMBA I',
+          nombre: 'Nicolas Milla',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal Liniers - AMBA I',
+          nombre: 'Fiorella Pugliese',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal - AMBA I',
+          nombre: 'Mariana Ledesma',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal - AMBA I',
+          nombre: 'Ezequiel Campos',
+          email: null,
+          telefono: null
+        },
+        // Senior de Sucursal - AMBA II
+        {
+          area: 'Senior de Sucursal - AMBA II',
+          nombre: 'Melina Galizi',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal - AMBA II',
+          nombre: 'Maria Elizondo',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal - AMBA II',
+          nombre: 'Yesica Pupilli',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal - AMBA II',
+          nombre: 'Emiliano Saigos',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal - AMBA II',
+          nombre: 'Paula Delaude',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal - AMBA II',
+          nombre: 'Micaela Delgado',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal - AMBA II',
+          nombre: 'Santiago Julian Roldan',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal - AMBA II',
+          nombre: 'Lorena Cuenca',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal - AMBA II',
+          nombre: 'Yesica Perez',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Senior de Sucursal - AMBA II',
+          nombre: 'Eduardo Oppizzi',
+          email: null,
+          telefono: null
+        },
+        // Senior Alianza
+        {
+          area: 'Senior Alianza',
+          nombre: 'Mariela Hermida',
+          email: null,
+          telefono: null
+        },
+        // Líderes Sucursales
+        {
+          area: 'Líder Red Flores',
+          nombre: 'Xoana Garyulo',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líderes Sucursales',
+          nombre: 'Analia Quiñones',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líderes Sucursales',
+          nombre: 'Pamela Ansede',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líderes Sucursales',
+          nombre: 'Jose Castillo',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líderes Sucursales',
+          nombre: 'Maximiliano Civiello',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líder Red ',
+          nombre: 'Camila Urrutipi',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líderes Sucursales',
+          nombre: 'Debora Ortiz',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líder Red Microcentro ',
+          nombre: 'Martina Cremona',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líder Red Microcentro',
+          nombre: 'Silvia Calderon',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líderes Sucursales',
+          nombre: 'Leila Fernandez',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líder Red San Miguel',
+          nombre: 'Maximo',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líderes Sucursales',
+          nombre: 'Pablo Falcone',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líderes Sucursales',
+          nombre: 'Mariela Cardetti',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líderes Sucursales',
+          nombre: 'Eugenia Gandini',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líderes Sucursales',
+          nombre: 'Maria Echegaray',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líderes Sucursales',
+          nombre: 'Samanta Fernandez',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líderes Sucursales',
+          nombre: 'Silvia Genco',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líderes Sucursales',
+          nombre: 'Florencia Cabanas',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líderes Sucursales',
+          nombre: 'Natalia Omar',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Líderes Sucursales',
+          nombre: 'Emanuel Alvarez',
+          email: null,
+          telefono: null
+        },
+        // Merchant Medium AMBA
+        {
+          area: 'Merchant Medium AMBA - Indumentaria',
+          nombre: 'Guillermina Ercoli',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Indumentaria',
+          nombre: 'David Mora',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Indumentaria',
+          nombre: 'Andres Acuña (Negro)',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Indumentaria',
+          nombre: 'Cristian Barrosa',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Indumentaria',
+          nombre: 'Debora Estefania Caceres',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Indumentaria',
+          nombre: 'Luis Perez',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Electro',
+          nombre: 'Damian Tejeda',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Electro',
+          nombre: 'Romina Donati',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Electro',
+          nombre: 'Ezequiel Ruben Sosa',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Construcción',
+          nombre: 'Sergio Garcia',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Shopping',
+          nombre: 'Santiago Castro',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Shopping',
+          nombre: 'Claribel Rocio Borroni',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Gastronomía',
+          nombre: 'Constanza Belen Eugster Geringer',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Gastronomía',
+          nombre: 'Alejandro Javier Iglesias',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Gastronomía',
+          nombre: 'Maria Paola Perez Mestre',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Entretenimiento',
+          nombre: 'Hernan Felipe Fresno Antunez',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Super y Farmacia',
+          nombre: 'Nicolas Viscarret',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Super y Farmacia',
+          nombre: 'Gustavo Emanuel Lemus Paz',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Super y Farmacia',
+          nombre: 'Maria Alegre',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Otras Industrias',
+          nombre: 'Martin Lezcano',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Otras Industrias',
+          nombre: 'Estefania Suarez',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Merchant Medium AMBA - Otras Industrias',
+          nombre: 'Tomas Lopez',
+          email: null,
+          telefono: null
+        },
+        // Equipo Brand
+        {
+          area: 'Equipo Brand - AMBA I',
+          nombre: 'Andres Gonzalez Lucero',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Equipo Brand - AMBA II',
+          nombre: 'Matias Gutman',
+          email: null,
+          telefono: null
+        },
+        // Pago a proveedores
+        {
+          area: 'Pago a proveedores',
+          nombre: 'Damian Alejandro Gaviglio',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Pago a proveedores',
+          nombre: 'Maria Elisa De Elias',
+          email: null,
+          telefono: null
+        },
+        // Limpieza Sucursales AMBA
+        {
+          area: 'Limpieza Sucursales AMBA',
+          nombre: 'Marcelo Benitez',
+          email: null,
+          telefono: null
+        },
+        // Mantenimiento Sucursales AMBA
+        {
+          area: 'Mantenimiento Sucursales AMBA',
+          nombre: 'Luciana Isabel Rueda',
+          email: null,
+          telefono: null
+        },
+        // Back Office Sistemas AMBA
+        {
+          area: 'Back Office Sistemas AMBA',
+          nombre: 'Juani Castro',
+          email: null,
+          telefono: null
+        },
+        // Banca Automática
+        {
+          area: 'Banca Automática',
+          nombre: 'Victoria Nasser',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Banca Automática',
+          nombre: 'Nicolas Cagnani',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Banca Automática',
+          nombre: 'Marcos Matias Fili',
+          email: null,
+          telefono: null
+        },
+        // People
+        {
+          area: 'People',
+          nombre: 'Julieta Perez Milano',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'People',
+          nombre: 'Daniela Morel',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'People',
+          nombre: 'Luciana Juve',
+          email: null,
+          telefono: null
+        },
+        // Gestión de Cajas
+        {
+          area: 'Gestión de Cajas',
+          nombre: 'Silvina Baudino',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Gestión de Cajas',
+          nombre: 'Maria Victoria Gomez',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Gestión de Cajas',
+          nombre: 'Daniela Perriello',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Gestión de Cajas',
+          nombre: 'Marcelo Velarde',
+          email: null,
+          telefono: null
+        },
+        // Seguridad Física Sucursales AMBA
+        {
+          area: 'Seguridad Física Sucursales AMBA',
+          nombre: 'Jose Diego Videla',
+          email: null,
+          telefono: null
+        },
+        // Cuentas y Ahorro
+        {
+          area: 'Cuentas y Ahorro - Dólar Mep',
+          nombre: 'Bruno Provenzano',
+          email: 'bruno.provenzano@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Cuentas y Ahorro - Cuenta remunerada',
+          nombre: 'Mercedes Mendez',
+          email: 'mercedes.mendez@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Cuentas y Ahorro - Transferencias in/out',
+          nombre: 'Agustina del Pozzo',
+          email: 'agustina.del@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Cuentas y Ahorro - Cuentas asociadas',
+          nombre: 'Agustina del Pozzo',
+          email: 'agustina.del@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Cuentas y Ahorro - Depósitos en efectivo',
+          nombre: 'julián Abellaneda',
+          email: 'julian.abellaneda@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Cuentas y Ahorro - Límites de transferencias in/out',
+          nombre: 'Alejandro Cipolat',
+          email: 'alejandro.cipolat@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Cuentas y Ahorro - Cuenta CBU ARS/USD',
+          nombre: 'Belén Perez Blanco',
+          email: 'mariabelen.perez@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Cuentas y Ahorro - Tarjeta de débito',
+          nombre: 'Magdalena Alvarez',
+          email: 'magdalena.alvarez@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Cuentas y Ahorro - Extra Cash',
+          nombre: 'Paola Herrera',
+          email: 'paola.herrera@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Cuentas y Ahorro - Extra Cash (Líder)',
+          nombre: 'Victoria Minassián',
+          email: 'mariavictoria.minassian@naranjax.com',
+          telefono: null
+        },
+        // Adquirencia (Ex Comercios Amigos)
+        {
+          area: 'Adquirencia - Alta de comercios',
+          nombre: 'Pamela Corvalán',
+          email: 'pamela.corvalan@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Adquirencia - Alta de comercios',
+          nombre: 'Cristina Gonzalez',
+          email: 'cristina.gonzalez@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Adquirencia - Alta de comercios (Líder)',
+          nombre: 'Soledad Celdrán',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Adquirencia - Promociones',
+          nombre: 'Florencia Marciano',
+          email: 'florencia.marciano@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Adquirencia - Promociones (Líder)',
+          nombre: 'Lucía Saboundji',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Adquirencia - Desconocimiento de cupones',
+          nombre: 'Ayelén Prandi',
+          email: 'ayelen.prandi@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Adquirencia - Desconocimiento de cupones (Líder)',
+          nombre: 'Soledad Celdrán',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Adquirencia - Generación de códigos',
+          nombre: 'David Barrionuevo',
+          email: 'david.barrionuevo@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Adquirencia - Generación de códigos (Líder)',
+          nombre: 'Gastón Tamagnini',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Adquirencia - Link de pago',
+          nombre: 'andres.algarra',
+          email: 'andres.algarra@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Adquirencia - Link de pago (Líder)',
+          nombre: 'Martín Ghibaudo',
+          email: null,
+          telefono: null
+        },
+        {
+          area: 'Adquirencia - Toque',
+          nombre: 'Sofía Valperga',
+          email: 'sofia.valperga@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Adquirencia - Qr',
+          nombre: 'Mariano Pandolfelli',
+          email: 'mariano.pandolfelli@naranjax.com',
+          telefono: null
+        },
+        // Originación
+        {
+          area: 'Originación',
+          nombre: 'Romina Delgado',
+          email: 'romina.delgado@naranjax.com',
+          telefono: null
+        },
+        // Experiencia
+        {
+          area: 'Experiencia',
+          nombre: 'Romina Ciccarelo',
+          email: 'romina.cicarello@naranjax.com',
+          telefono: null
+        },
+        // Financiación de resumen de cuenta
+        {
+          area: 'Financiación de resumen de cuenta',
+          nombre: 'Martín Núñez',
+          email: 'martin.nuñez@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Financiación de resumen de cuenta',
+          nombre: 'Cristian Gautero',
+          email: null,
+          telefono: null
+        },
+        // Pago de resumen de cuenta
+        {
+          area: 'Pago de resumen de cuenta',
+          nombre: 'Martín Núñez',
+          email: 'martin.nuñez@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Pago de resumen de cuenta',
+          nombre: 'Cristian Gautero',
+          email: null,
+          telefono: null
+        },
+        // Créditos
+        {
+          area: 'Créditos - Préstamos',
+          nombre: 'Marcos Benítez de Lugo',
+          email: 'marcos.benitezdelugo@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Créditos - Cuotas sin tarjeta',
+          nombre: 'Joaquín Pérez',
+          email: 'joaquin.perez@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Créditos - Cuotas sin tarjeta',
+          nombre: 'Facundo Villarroya',
+          email: 'facundo.villarroya@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Créditos - Cuotas sin tarjeta (Líder)',
+          nombre: 'Nicolás Alsina',
+          email: 'nicolas.alsina@naranjax.com',
+          telefono: null
+        },
+        // Seguros
+        {
+          area: 'Seguros - Negocio',
+          nombre: 'Andres Pratto',
+          email: 'andres.pratto@naranjax.com',
+          telefono: null
+        },
+        {
+          area: 'Seguros - Negocio',
+          nombre: 'Ezequiel Prymaczok',
+          email: 'ezequiel.prymaczok@naranjax.com',
+          telefono: null
+        },
+      ];
+      // Función para mostrar los resultados
+      const displayReferentes = (results) => {
+        resultsContainer.innerHTML = ''; // Limpia resultados anteriores
+        if (results.length === 0) {
+          resultsContainer.innerHTML = '<p class="text-gray-500 text-center">No se encontraron referentes.</p>';
+        } else {
+          results.forEach(referente => {
+            const card = document.createElement('div');
+            card.className = 'bg-gray-50 p-4 rounded-lg border border-gray-200';
+            card.innerHTML = `
+                            <p class="font-bold text-lg naranja-x-text-orange">${referente.nombre}</p>
+                            <p class="text-gray-700">Área: <span class="font-medium">${referente.area}</span></p>
+                            ${referente.telefono ? `<p class="text-gray-700">Teléfono: <span class="font-medium">${referente.telefono}</span></p>` : ''}
+                            ${referente.email ? `<p class="text-gray-700">Email: <span class="font-medium">${referente.email}</span></p>` : ''}
+                        `;
+            resultsContainer.appendChild(card);
+          });
+        }
+      };
+      // Listener para el desplegable
+      areaSelect.addEventListener('change', (e) => {
+        const selectedArea = e.target.value;
+        if (selectedArea === "") {
+          resultsContainer.innerHTML = "";
+          return;
+        }
+        const filteredResults = referentesData.filter(referente =>
+          referente.area === selectedArea
+        );
+        displayReferentes(filteredResults);
+      });
+      // Función para poblar el desplegable al cargar la página
+      const populateAreaDropdown = () => {
+        const uniqueAreas = [...new Set(referentesData.map(item => item.area))];
+        uniqueAreas.sort(); // Opcional: ordenar las áreas alfabéticamente
+        uniqueAreas.forEach(area => {
+          const option = document.createElement('option');
+          option.value = area;
+          option.textContent = area;
+          areaSelect.appendChild(option);
+        });
+      };
+      // Llama a la función para poblar el desplegable
+      populateAreaDropdown();
+      // Lógica para el Asistente de IA (sin cambios)
+      const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=";
+      const API_KEY = ""; // La API key será proporcionada en tiempo de ejecución.
+      generateBtn.addEventListener('click', async () => {
+        const prompt = promptInput.value;
+        const knowledgeBaseText = knowledgeBaseInput.value;
+        if (!prompt) {
+          alert('Por favor, ingresa una consulta para el asistente.');
+          return;
+        }
+        // Ocultar respuesta anterior y mostrar el loader
+        responseContainer.classList.add('hidden');
+        loadingIndicator.classList.remove('hidden');
+        // Aumentar el prompt con la base de conocimientos
+        let fullPrompt = `Actúa como un asesor de experiencia de Naranja X. Tu objetivo es generar una respuesta empática, clara y profesional para un cliente. Utiliza el siguiente contexto para generar tu respuesta: ${knowledgeBaseText}. El cliente ha planteado el siguiente problema: "${prompt}". La respuesta debe estar estructurada, ser concisa y educada, y debe concluir invitando al cliente a dar seguimiento.`;
+        if (!knowledgeBaseText) {
+          fullPrompt = `Actúa como un asesor de experiencia de Naranja X. Tu objetivo es generar una respuesta empática, clara y profesional para un cliente. El cliente ha planteado el siguiente problema: "${prompt}". La respuesta debe estar estructurada, ser concisa y educada, y debe concluir invitando al cliente a dar seguimiento.`;
+        }
+        const payload = {
+          contents: [{
+            role: "user",
+            parts: [{
+              text: fullPrompt
+            }]
+          }]
+        };
+        // Lógica de reintento exponencial
+        let attempts = 0;
+        const maxAttempts = 5;
+        const baseDelay = 1000; // 1 segundo
+        async function fetchWithRetry() {
+          try {
+            const response = await fetch(API_URL + API_KEY, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(payload)
+            });
+            if (!response.ok) {
+              if (response.status === 429 && attempts < maxAttempts) {
+                const delay = baseDelay * Math.pow(2, attempts) + Math.random() * 1000;
+                console.log(`Demasiadas solicitudes. Reintentando en ${delay / 1000} segundos...`);
+                attempts++;
+                await new Promise(res => setTimeout(res, delay));
+                return fetchWithRetry();
+              } else {
+                throw new Error(`HTTP error! status: ${response.status}`);
+              }
+            }
+            const result = await response.json();
+            if (result.candidates && result.candidates.length > 0 && result.candidates[0].content && result.candidates[0].content.parts && result.candidates[0].content.parts.length > 0) {
+              const text = result.candidates[0].content.parts[0].text;
+              generatedResponse.textContent = text;
+              responseContainer.classList.remove('hidden');
+            } else {
+              generatedResponse.textContent = "Lo siento, no pude generar una respuesta. Intenta de nuevo.";
+              responseContainer.classList.remove('hidden');
+              console.error('Respuesta de la API inesperada:', result);
+            }
+          } catch (error) {
+            generatedResponse.textContent = "Ocurrió un error. Por favor, revisa tu conexión e inténtalo de nuevo.";
+            responseContainer.classList.remove('hidden');
+            console.error('Error al llamar a la API de Gemini:', error);
+          } finally {
+            loadingIndicator.classList.add('hidden');
+          }
+        }
+        fetchWithRetry();
+      });
+      copyBtn.addEventListener('click', () => {
+        const textToCopy = generatedResponse.textContent;
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          copyMessage.classList.remove('hidden');
+          setTimeout(() => {
+            copyMessage.classList.add('hidden');
+          }, 2000);
+        }).catch(err => {
+          console.error('Error al copiar el texto: ', err);
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
